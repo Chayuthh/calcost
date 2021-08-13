@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+    </style>
+    <title>Calculate Cost</title>
+</head>
+
+<body>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ส่วนประกอบ</th>
+                <th scope="col">ปริมาณสุทธิ (กรัม)</th>
+                <th scope="col">ปริมาณที่ใช้ (กรัม)</th>
+                <th scope="col">ราคาซื้อ (บาท)</th>
+                <th scope="col">ต้นทุน (บาท/กรัม)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="text" id="fname" style="width: 70px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="fnet" style="width: 40px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="fprice" style="width: 40px;">
+                </td>
+                <td>
+                    <input type="text" id="fuse" style="width: 40px;" oninput="cal(1)">
+                </td>
+                <td>
+                    <p id="cost1"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="sname" style="width: 70px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="snet" style="width: 40px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="sprice" style="width: 40px;">
+                </td>
+                <td>
+                    <input type="text" id="suse" style="width: 40px;" oninput="cal(2)">
+                </td>
+                <td>
+                    <p id="cost2"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="trname" style="width: 70px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="trnet" style="width: 40px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="trprice" style="width: 40px;">
+                </td>
+                <td>
+                    <input type="text" id="truse" style="width: 40px;" oninput="cal(3)">
+                </td>
+                <td>
+                    <p id="cost3"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="foname" style="width: 70px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="fonet" style="width: 40px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="foprice" style="width: 40px;">
+                </td>
+                <td>
+                    <input type="text" id="fouse" style="width: 40px;" oninput="cal(4)">
+                </td>
+                <td>
+                    <p id="cost4"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="finame" style="width: 70px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="finet" style="width: 40px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="fiprice" style="width: 40px;">
+                </td>
+                <td>
+                    <input type="text" id="fiuse" style="width: 40px;" oninput="cal(5)">
+                </td>
+                <td>
+                    <p id="cost5"></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="calAll()">คำนวนต้นทุนทั้งหมด</button>
+    <h3 id="allcost">ต้นทุนทั้งหมด 0 บาท</h3>
+
+    <script>
+        function cal(id) {
+            let net = '';
+            let price = '';
+            let use = '';
+            let netCal = '';
+            let priceCal = '';
+            let useCal = '';
+            let cost = '';
+
+            switch (id) {
+                case 1:
+                    cost = 'cost1';
+                    net = 'fnet';
+                    price = 'fprice';
+                    use = 'fuse';
+                    break;
+
+                case 2:
+                    cost = 'cost2';
+                    net = 'snet';
+                    price = 'sprice';
+                    use = 'suse';
+                    break;
+
+                case 3:
+                    cost = 'cost3';
+                    net = 'trnet';
+                    price = 'trprice';
+                    use = 'truse';
+                    break;
+
+                case 4:
+                    cost = 'cost4';
+                    net = 'fonet';
+                    price = 'foprice';
+                    use = 'fouse';
+                    break;
+
+                case 5:
+                    cost = 'cost5';
+                    net = 'finet';
+                    price = 'fiprice';
+                    use = 'fiuse';
+                    break;
+            }
+            netCal = document.getElementById(net).value;
+            priceCal = document.getElementById(price).value;
+            useCal = document.getElementById(use).value;
+
+            let calculate = (useCal * (priceCal / netCal)).toFixed(2);
+            document.getElementById(cost).innerHTML = calculate;
+        }
+
+        function calAll() {
+            let v1 = Number(document.getElementById('cost1').innerHTML);
+            let v2 = Number(document.getElementById('cost2').innerHTML);
+            let v3 = Number(document.getElementById('cost3').innerHTML);
+            let v4 = Number(document.getElementById('cost4').innerHTML);
+            let v5 = Number(document.getElementById('cost5').innerHTML);
+
+            if (!v1) v1 = 0;
+            if (!v2) v2 = 0;
+            if (!v3) v3 = 0;
+            if (!v4) v4 = 0;
+            if (!v5) v5 = 0;
+            // if (!v2) v2 = 0;
+            // if (!v2) v2 = 0;
+            let allC = v1 + v2 + v3 + v4 +v5;
+            document.getElementById('allcost').innerHTML = `ต้นทุนทั้งหมด ${allC} บาท`;
+        }
+    </script>
+</body>
+
+</html>
