@@ -27,10 +27,10 @@
                     <input type="text" id="fname" style="width: 70px;">
                 </td>
                 <td>
-                    <input type="number" min="0" id="fnet" style="width: 40px;">
+                    <input type="number" min="0" id="fnet" style="width: 40px;" oninput="cal(1)">
                 </td>
                 <td>
-                    <input type="number" min="0" id="fprice" style="width: 40px;">
+                    <input type="number" min="0" id="fprice" style="width: 40px;" oninput="cal(1)">
                 </td>
                 <td>
                     <input type="text" id="fuse" style="width: 40px;" oninput="cal(1)">
@@ -45,10 +45,10 @@
                     <input type="text" id="sname" style="width: 70px;">
                 </td>
                 <td>
-                    <input type="number" min="0" id="snet" style="width: 40px;">
+                    <input type="number" min="0" id="snet" style="width: 40px;" oninput="cal(2)">
                 </td>
                 <td>
-                    <input type="number" min="0" id="sprice" style="width: 40px;">
+                    <input type="number" min="0" id="sprice" style="width: 40px;" oninput="cal(2)">
                 </td>
                 <td>
                     <input type="text" id="suse" style="width: 40px;" oninput="cal(2)">
@@ -63,10 +63,10 @@
                     <input type="text" id="trname" style="width: 70px;">
                 </td>
                 <td>
-                    <input type="number" min="0" id="trnet" style="width: 40px;">
+                    <input type="number" min="0" id="trnet" style="width: 40px;" oninput="cal(3)">
                 </td>
                 <td>
-                    <input type="number" min="0" id="trprice" style="width: 40px;">
+                    <input type="number" min="0" id="trprice" style="width: 40px;" oninput="cal(3)">
                 </td>
                 <td>
                     <input type="text" id="truse" style="width: 40px;" oninput="cal(3)">
@@ -81,10 +81,10 @@
                     <input type="text" id="foname" style="width: 70px;">
                 </td>
                 <td>
-                    <input type="number" min="0" id="fonet" style="width: 40px;">
+                    <input type="number" min="0" id="fonet" style="width: 40px;" oninput="cal(4)">
                 </td>
                 <td>
-                    <input type="number" min="0" id="foprice" style="width: 40px;">
+                    <input type="number" min="0" id="foprice" style="width: 40px;" oninput="cal(4)">
                 </td>
                 <td>
                     <input type="text" id="fouse" style="width: 40px;" oninput="cal(4)">
@@ -99,16 +99,106 @@
                     <input type="text" id="finame" style="width: 70px;">
                 </td>
                 <td>
-                    <input type="number" min="0" id="finet" style="width: 40px;">
+                    <input type="number" min="0" id="finet" style="width: 40px;" oninput="cal(5)">
                 </td>
                 <td>
-                    <input type="number" min="0" id="fiprice" style="width: 40px;">
+                    <input type="number" min="0" id="fiprice" style="width: 40px;" oninput="cal(5)">
                 </td>
                 <td>
                     <input type="text" id="fiuse" style="width: 40px;" oninput="cal(5)">
                 </td>
                 <td>
                     <p id="cost5"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="sxname" style="width: 70px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="sxnet" style="width: 40px;" oninput="cal(6)">
+                </td>
+                <td>
+                    <input type="number" min="0" id="sxprice" style="width: 40px;" oninput="cal(6)">
+                </td>
+                <td>
+                    <input type="text" id="sxuse" style="width: 40px;" oninput="cal(6)">
+                </td>
+                <td>
+                    <p id="cost6"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="svname" style="width: 70px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="svnet" style="width: 40px;" oninput="cal(7)">
+                </td>
+                <td>
+                    <input type="number" min="0" id="svprice" style="width: 40px;" oninput="cal(7)">
+                </td>
+                <td>
+                    <input type="text" id="svuse" style="width: 40px;" oninput="cal(7)">
+                </td>
+                <td>
+                    <p id="cost7"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="egname" style="width: 70px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="egnet" style="width: 40px;" oninput="cal(8)">
+                </td>
+                <td>
+                    <input type="number" min="0" id="egprice" style="width: 40px;" oninput="cal(8)">
+                </td>
+                <td>
+                    <input type="text" id="eguse" style="width: 40px;" oninput="cal(8)">
+                </td>
+                <td>
+                    <p id="cost8"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="niname" style="width: 70px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="ninet" style="width: 40px;" oninput="cal(9)">
+                </td>
+                <td>
+                    <input type="number" min="0" id="niprice" style="width: 40px;" oninput="cal(9)">
+                </td>
+                <td>
+                    <input type="text" id="niuse" style="width: 40px;" oninput="cal(9)">
+                </td>
+                <td>
+                    <p id="cost9"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" id="tename" style="width: 70px;">
+                </td>
+                <td>
+                    <input type="number" min="0" id="tenet" style="width: 40px;" oninput="cal(10)">
+                </td>
+                <td>
+                    <input type="number" min="0" id="teprice" style="width: 40px;" oninput="cal(10)">
+                </td>
+                <td>
+                    <input type="text" id="teuse" style="width: 40px;" oninput="cal(10)">
+                </td>
+                <td>
+                    <p id="cost10"></p>
                 </td>
             </tr>
         </tbody>
@@ -161,6 +251,41 @@
                     price = 'fiprice';
                     use = 'fiuse';
                     break;
+
+                case 6:
+                    cost = 'cost6';
+                    net = 'sxnet';
+                    price = 'sxprice';
+                    use = 'sxuse';
+                    break;
+
+                case 7:
+                    cost = 'cost7';
+                    net = 'svnet';
+                    price = 'svprice';
+                    use = 'svuse';
+                    break
+
+                case 8:
+                    cost = 'cost8';
+                    net = 'egnet';
+                    price = 'egprice';
+                    use = 'eguse';
+                    break;
+
+                case 9:
+                    cost = 'cost9';
+                    net = 'ninet';
+                    price = 'niprice';
+                    use = 'niuse';
+                    break;
+
+                case 10:
+                    cost = 'cost10';
+                    net = 'tenet';
+                    price = 'teprice';
+                    use = 'teuse';
+                    break;
             }
             netCal = document.getElementById(net).value;
             priceCal = document.getElementById(price).value;
@@ -176,15 +301,23 @@
             let v3 = Number(document.getElementById('cost3').innerHTML);
             let v4 = Number(document.getElementById('cost4').innerHTML);
             let v5 = Number(document.getElementById('cost5').innerHTML);
+            let v6 = Number(document.getElementById('cost6').innerHTML);
+            let v7 = Number(document.getElementById('cost7').innerHTML);
+            let v8 = Number(document.getElementById('cost8').innerHTML);
+            let v9 = Number(document.getElementById('cost9').innerHTML);
+            let v10 = Number(document.getElementById('cost10').innerHTML);
 
             if (!v1) v1 = 0;
             if (!v2) v2 = 0;
             if (!v3) v3 = 0;
             if (!v4) v4 = 0;
             if (!v5) v5 = 0;
-            // if (!v2) v2 = 0;
-            // if (!v2) v2 = 0;
-            let allC = v1 + v2 + v3 + v4 +v5;
+            if (!v6) v6 = 0;
+            if (!v7) v7 = 0;
+            if (!v8) v8 = 0;
+            if (!v9) v9 = 0;
+            if (!v10) v10 = 0;
+            allC = v1 + v2 + v3 + v4 + v5 + v6 + v7 + v8 + v9 + v10;
             document.getElementById('allcost').innerHTML = `ต้นทุนทั้งหมด ${allC} บาท`;
         }
     </script>
